@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-Jaren Strategie: ToekomstZorg x De Moester</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hih: {
+                            green: '#1E5939',
+                            orange: '#E35220',
+                            sand: '#F5F2EB',
+                            white: '#FFFFFF',
+                            dark: '#2C3531',
+                            gray: '#555F5A'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Helvetica Neue', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom CSS voor de 3D Flipcards -->
+    <style>
+        body {
+            background-color: #E5E0D8;
+            color: #2C3531;
+        }
+
+        .perspective-1000 { perspective: 1000px; }
+        .transform-style-3d { transform-style: preserve-3d; }
+        
+        .backface-hidden {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+        
+        .rotate-y-180 { transform: rotateY(180deg); }
+
+        .flip-card-inner {
+            transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transform-style: preserve-3d;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border-radius: 40px 0 40px 0;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front {
+            background-color: #FFFFFF;
+            border-top: 6px solid #1E5939;
+            border-radius: 40px 0 40px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .card-back {
+            background-color: #1E5939;
+            color: #FFFFFF;
+            border-bottom: 6px solid #E35220;
+            border-radius: 40px 0 40px 0;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card-back.accent {
+            background-color: #E35220;
+            border-bottom-color: #1E5939;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8 antialiased">
+
+    <!-- Header & Executive Summary -->
+    <div class="max-w-7xl mx-auto mb-10">
+        <div class="bg-hih-dark text-white p-8 md:p-12 rounded-[40px_0_40px_0] shadow-2xl border-b-8 border-hih-orange relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 text-white opacity-5 text-9xl">🔭</div>
+            
+            <div class="inline-block bg-hih-orange text-white text-xs font-bold px-4 py-1.5 rounded-full mb-4 uppercase tracking-widest">
+                Beleidsanalyse: ToekomstZorg 2026-2036
+            </div>
+            <h1 class="text-3xl md:text-5xl font-black mb-4 leading-tight">
+                De Moester als Vlaamse Piloot
+            </h1>
+            <p class="text-hih-sand text-lg max-w-3xl leading-relaxed">
+                Het opiniestuk <em>'Binnen tien jaar zal de zorg er heel anders uitzien'</em> is de perfecte legitimatie voor onze strategie. De overheid wil af van verstikkende regelgeving en sectorale silo's. Ze zoeken naar 'regelluwe proeftuinen' waar gemeenschapsgerichte zorg primeert. Met ons 50-jarig jubileum, het congres en de overstap naar het Clubhouse-model, staan wij op de eerste rij om deze rol te claimen.
+            </p>
+        </div>
+    </div>
+
+    <!-- Flipcard Grid -->
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Thema 1: Sectoroverschrijdend -->
+        <div class="flip-card perspective-1000 w-full h-[380px]">
+            <div class="flip-card-inner relative w-full h-full">
+                <!-- Front (Artikel) -->
+                <div class="card-front absolute w-full h-full backface-hidden">
+                    <div class="text-4xl mb-4">🧱</div>
+                    <div class="text-xs font-bold text-hih-gray uppercase tracking-wider mb-2">Visie Overheid</div>
+                    <h3 class="text-xl font-black text-hih-dark mb-4">Silo's Doorbreken</h3>
+                    <p class="text-hih-gray text-sm leading-relaxed">
+                        Mensen passen niet in één schuifje (GGZ, Ouderenzorg, Jeugd). De overheid erkent dat het huidige systeem versnipperd is en wil actoren aanmoedigen om over de grenzen van hun erkenning heen te werken.
+                    </p>
+                </div>
+                <!-- Back (De Moester Strategie) -->
+                <div class="card-back absolute w-full h-full backface-hidden rotate-y-180">
+                    <h4 class="text-lg font-black text-hih-orange mb-3 border-b border-white/20 pb-2">De Moester: 10-Jaren Plan</h4>
+                    <p class="text-sm text-hih-sand leading-relaxed">
+                        <strong>Dit doen wij al!</strong> Wij wachten niet op de overheid. Onze convenanten met het OCMW (AMA), de samenwerking met Poco Loco voor vrije tijd, en het openstellen van onze deuren voor buurtbewoners en babyboomers, is exact de 'out-of-the-box' synergie die de minister zoekt.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thema 2: Regelluwte -->
+        <div class="flip-card perspective-1000 w-full h-[380px]">
+            <div class="flip-card-inner relative w-full h-full">
+                <!-- Front -->
+                <div class="card-front absolute w-full h-full backface-hidden" style="border-top-color: #E35220;">
+                    <div class="text-4xl mb-4">✂️</div>
+                    <div class="text-xs font-bold text-hih-gray uppercase tracking-wider mb-2">Visie Overheid</div>
+                    <h3 class="text-xl font-black text-hih-dark mb-4">Regelluw Ondernemen</h3>
+                    <p class="text-hih-gray text-sm leading-relaxed">
+                        "Zwarte pieten naar de overheid schuiven mag stoppen." De overheid creëert 'Innovatieruimte Plus' waar starre procedures tijdelijk tussen haakjes gezet mogen worden om te zien wat écht werkt op de werkvloer.
+                    </p>
+                </div>
+                <!-- Back -->
+                <div class="card-back accent absolute w-full h-full backface-hidden rotate-y-180">
+                    <h4 class="text-lg font-black text-white mb-3 border-b border-white/20 pb-2">De Moester: 10-Jaren Plan</h4>
+                    <p class="text-sm text-white/90 leading-relaxed">
+                        Dit is ons mandaat voor het <strong>Clubhouse-model</strong>. We stappen af van zware medische registraties in de ateliers. Mochten we bij inspecties botsen op administratieve drempels, dan roepen we het "ToekomstZorg" statuut in als proeftuin. De regie moet terug naar het lid, niet naar het formulier.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thema 3: Open Infrastructuur -->
+        <div class="flip-card perspective-1000 w-full h-[380px]">
+            <div class="flip-card-inner relative w-full h-full">
+                <!-- Front -->
+                <div class="card-front absolute w-full h-full backface-hidden">
+                    <div class="text-4xl mb-4">🏘️</div>
+                    <div class="text-xs font-bold text-hih-gray uppercase tracking-wider mb-2">Visie Overheid</div>
+                    <h3 class="text-xl font-black text-hih-dark mb-4">Bruisende Zorgdorpen</h3>
+                    <p class="text-hih-gray text-sm leading-relaxed">
+                        De grootschalige, afgeschermde instellingen hebben afgedaan. De overheid wil modulaire, multifunctionele gebouwen die middenin de samenleving en de buurt staan.
+                    </p>
+                </div>
+                <!-- Back -->
+                <div class="card-back absolute w-full h-full backface-hidden rotate-y-180">
+                    <h4 class="text-lg font-black text-hih-orange mb-3 border-b border-white/20 pb-2">De Moester: 10-Jaren Plan</h4>
+                    <p class="text-sm text-hih-sand leading-relaxed">
+                        Dit rechtvaardigt onze investeringen (via vzw Bieënkorf) in het domein aan de Putstraat. De Moester is geen gesloten kliniek, maar een open dorpshub. De plantenverkoop, de tearoom en de integratie met Sint-Denijs-Westrem bewijzen dit. We moeten nog meer inzetten op 'Zorgzame Buurten'.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thema 4: Demografie & Personeel -->
+        <div class="flip-card perspective-1000 w-full h-[380px]">
+            <div class="flip-card-inner relative w-full h-full">
+                <!-- Front -->
+                <div class="card-front absolute w-full h-full backface-hidden" style="border-top-color: #E35220;">
+                    <div class="text-4xl mb-4">🧑‍🦳</div>
+                    <div class="text-xs font-bold text-hih-gray uppercase tracking-wider mb-2">Visie Overheid</div>
+                    <h3 class="text-xl font-black text-hih-dark mb-4">Demografische Crisis</h3>
+                    <p class="text-hih-gray text-sm leading-relaxed">
+                        We worden ouder met complexe zorgnoden, en tegelijkertijd kampen we met een massaal tekort aan zorgprofessionals. "Opsmukken van het systeem is niet meer voldoende, een omslag is nodig."
+                    </p>
+                </div>
+                <!-- Back -->
+                <div class="card-back accent absolute w-full h-full backface-hidden rotate-y-180">
+                    <h4 class="text-lg font-black text-white mb-3 border-b border-white/20 pb-2">De Moester: 10-Jaren Plan</h4>
+                    <p class="text-sm text-white/90 leading-relaxed">
+                        Onze strategie om <strong>actieve babyboomers</strong> aan te trekken als mentoren in de ateliers (AMA) is het antwoord. We lossen de eenzaamheid van de ouderenzorg op, én we ontlasten onze professionele begeleiders, zodat we het personeelstekort lokaal opvangen door 'gemeenschapskracht'.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thema 5: Wetenschap & Co-Creatie -->
+        <div class="flip-card perspective-1000 w-full h-[380px]">
+            <div class="flip-card-inner relative w-full h-full">
+                <!-- Front -->
+                <div class="card-front absolute w-full h-full backface-hidden">
+                    <div class="text-4xl mb-4">🔬</div>
+                    <div class="text-xs font-bold text-hih-gray uppercase tracking-wider mb-2">Visie Overheid</div>
+                    <h3 class="text-xl font-black text-hih-dark mb-4">Evidence Based</h3>
+                    <p class="text-hih-gray text-sm leading-relaxed">
+                        Het project ToekomstZorg werkt samen met universiteiten (o.a. UGent, KU Leuven). Initiatieven worden begeleid door wetenschappers om te bewijzen dat hun intersectorale aanpak werkt, om ze zo te verduurzamen en op te schalen.
+                    </p>
+                </div>
+                <!-- Back -->
+                <div class="card-back absolute w-full h-full backface-hidden rotate-y-180">
+                    <h4 class="text-lg font-black text-hih-orange mb-3 border-b border-white/20 pb-2">De Moester: 10-Jaren Plan</h4>
+                    <p class="text-sm text-hih-sand leading-relaxed">
+                        Wij hebben de academische wereld al aan boord. Door figuren als Prof. Griet Roets (UGent - Sociaal Werk) te betrekken in de raad van bestuur en het congres, borgen we dat onze methodiek (Clubhouse, outreachend) academisch gevalideerd en dus politiek onomstreden wordt.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thema 6: Het Congres als Katalysator -->
+        <div class="flip-card perspective-1000 w-full h-[380px]">
+            <div class="flip-card-inner relative w-full h-full">
+                <!-- Front -->
+                <div class="card-front absolute w-full h-full backface-hidden" style="border-top-color: #E35220;">
+                    <div class="text-4xl mb-4">🎤</div>
+                    <div class="text-xs font-bold text-hih-gray uppercase tracking-wider mb-2">Visie Overheid</div>
+                    <h3 class="text-xl font-black text-hih-dark mb-4">Keep It Simple</h3>
+                    <p class="text-hih-gray text-sm leading-relaxed">
+                        "Mensen die langdurig hulp nodig hebben, moeten langs vele deuren en achtergebouwen passeren." De overheid wil de zorg terug versimpelen rond de mens.
+                    </p>
+                </div>
+                <!-- Back -->
+                <div class="card-back accent absolute w-full h-full backface-hidden rotate-y-180">
+                    <h4 class="text-lg font-black text-white mb-3 border-b border-white/20 pb-2">De Moester: 10-Jaren Plan</h4>
+                    <p class="text-sm text-white/90 leading-relaxed">
+                        Ons Europees Congres <strong>"Keep it simple" (Okt 2026)</strong> is een briljante, proactieve zet. We kaarten exact dít probleem aan op Europees niveau (samen met Mental Health Europe). We profileren De Moester als dé thought leader in de transitie waar de overheid om vraagt.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Executive Conclusion -->
+    <div class="max-w-7xl mx-auto mt-10">
+        <div class="bg-white p-8 rounded-[40px_0_40px_0] shadow-lg border border-hih-sand">
+            <h3 class="text-2xl font-black text-hih-green mb-4">Besluit voor de Raad van Bestuur</h3>
+            <p class="text-hih-gray leading-relaxed font-medium">
+                Het project ToekomstZorg start eind januari 2026 met een 'eenmalige oproep' voor de <em>Innovatieruimte Plus</em>. Gezien de inhoud van het artikel, beantwoordt De Moester 100% aan de criteria. <br><br>
+                <strong>De te nemen stap:</strong> De Moester moet zich positioneren (en zich inschrijven) als pilootproject in dit traject. Dit opent deuren naar extra subsidies ("tijdelijk een projectmanager aanstellen"), beschermt ons tegen rigide inspecties, en zet ons 50-jarig jubileum stevig op de politieke kaart.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
+```eof
+
+### Hoe je dit kan gebruiken voor jouw strategie de komende 10 jaar:
+
+Het artikel geeft je eigenlijk het perfecte 'excuus' om zware, interne veranderingen door te drukken. Als er binnen de Raad van Bestuur of het team weerstand is tegen vernieuwingen (zoals de Clubhouse werking, of het afstoten van vrije tijd naar Poco Loco), kan je verwijzen naar dit overheidsbeleid:
+
+1.  **Stop met verantwoorden:** "We móéten dit doen. Minister Gennez en ToekomstZorg vragen letterlijk om bottom-up initiatieven die oude regels loslaten."
+2.  **Subsidie opportuniteit:** Er komen fondsen vrij (Innovatieruimte Plus) eind januari. De Moester moet dat dossier indienen.
+3.  **Het Congres is de perfecte PR:** Gebruik het congres "Keep it Simple" om aan te tonen aan de politiek (Mathias De Clercq, Astrid De Bruycker, etc.) dat Hand in Hand al *doet* waar ToekomstZorg nog maar net aan begint.
